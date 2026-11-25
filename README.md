@@ -3,14 +3,13 @@
 > Transformando ideias em soluções inteligentes.
 
 ## Sobre a Empresa
-Desenvolver soluções tecnológicas que simplifiquem processos e impulsionem o
-crescimento de empresas.
+Desenvolver soluções tecnológicas
 
 ## Localização
 - **Endereço:** Rua das inovações, 245
-- **Local:** Bairro tecnólogico, Piripiri, PI - CEP 64260-315
+- **Local:** Bairro tecnológico, Piripiri, PI - CEP 64260-315
 
 ## Equipe
-- **Eric Araújo** — CEO e Gerente de projetos
-- **Enzo Victorio** — Desenvolvedor Full Stack
+- **Eric Araújo** — CEO e Gerente de Projetos
+- **Enzo Victorio** — Desnevolvedor Full Stack
 - **Lucas Ferreira** — Designer UI/UX
