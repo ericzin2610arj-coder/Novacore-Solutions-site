@@ -1,3 +1,4 @@
+
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import Cartao from '../components/Cartao.astro';
@@ -5,68 +6,118 @@ import { empresa } from '../data/empresa.js';
 ---
 
 <LayoutBase 
-	titulo="Fale Conosco" 
-	descricao={`Entre em contato com a ${empresa.nome}.`}
+  titulo="Fale Conosco" 
+  descricao={`Entre em contato com a ${empresa.nome}.`}
 >
-	<section class="secao">
-		<div class="container">
-			<div class="cabecalho-secao">
-				<h1>Fale Conosco</h1>
-				<p>Deseja construir uma solução de software sob medida para o seu negócio? Entre em contato com a {empresa.nome}!</p>
-			</div>
+  <section class="secao">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <h1>Fale Conosco</h1>
+        <p>
+          Deseja construir uma solução de software sob medida para o seu negócio?
+          Entre em contato com a {empresa.nome}!
+        </p>
+      </div>
 
-			<div class="grid-contato">
-				<Cartao>
-					<h2>Nossa Sede</h2>
-					<address>
-						{empresa.contato.endereco.logradouro}, {empresa.contato.endereco.complemento}<br/>
-						{empresa.contato.endereco.bairro}<br/>
-						{empresa.contato.endereco.cidadeEstado}<br/>
-						CEP: {empresa.contato.endereco.cep}
-					</address>
-				</Cartao>
+      <div class="fachada-container">
+        <img
+          src="/images/fachada-novacore.png"
+          alt="Fachada da sede da NovaCore Solutions"
+          class="fachada-empresa"
+        />
+      </div>
 
-				<Cartao>
-					<h2>Canais Digitais</h2>
-					<p><strong>E-mail:</strong> <a href={`mailto:${empresa.contato.email}`}>{empresa.contato.email}</a></p>
-					<p><strong>Telefone:</strong> {empresa.contato.telefone}</p>
-				</Cartao>
-			</div>
-		</div>
-	</section>
+      <div class="grid-contato">
+        <Cartao>
+          <h2>Nossa Sede</h2>
+          <address>
+            {empresa.contato.endereco.logradouro}, {empresa.contato.endereco.complemento}<br/>
+            {empresa.contato.endereco.bairro}<br/>
+            {empresa.contato.endereco.cidadeEstado}<br/>
+            CEP: {empresa.contato.endereco.cep}
+          </address>
+        </Cartao>
+
+        <Cartao>
+          <h2>Canais Digitais</h2>
+          <p>
+            <strong>E-mail:</strong>
+            <a href={`mailto:${empresa.contato.email}`}>
+              {empresa.contato.email}
+            </a>
+          </p>
+          <p>
+            <strong>Telefone:</strong> {empresa.contato.telefone}
+          </p>
+        </Cartao>
+      </div>
+    </div>
+  </section>
 </LayoutBase>
 
 <style>
-	.cabecalho-secao {
-		margin-bottom: 3rem;
-	}
+  .cabecalho-secao {
+    margin-bottom: 3rem;
+  }
 
-	.cabecalho-secao p {
-		font-size: 1.125rem;
-		color: var(--cor-texto-secundario);
-	}
+  .cabecalho-secao p {
+    font-size: 1.125rem;
+    color: var(--cor-texto-secundario);
+  }
 
-	.grid-contato {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
+  .fachada-container {
+    width: 100%;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 0 25px rgba(0, 88, 236, 0.15);
+  }
 
-	.grid-contato h2 {
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-		color: var(--cor-secundaria);
-	}
+  .fachada-empresa {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
 
-	address {
-		font-style: normal;
-	}
+  .fachada-container:hover .fachada-empresa {
+    transform: scale(1.02);
+  }
 
-	.grid-contato p {
-		margin-bottom: 0.5rem;
-	}
+  .grid-contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
 
-	.grid-contato p:last-child {
-		margin-bottom: 0;
-	}
+  .grid-contato h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-destaque);
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  .grid-contato p {
+    margin-bottom: 0.5rem;
+  }
+
+  .grid-contato p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 600px) {
+    .grid-contato {
+      grid-template-columns: 1fr;
+    }
+
+    .fachada-container {
+      margin-bottom: 2rem;
+      border-radius: 10px;
+    }
+  }
 </style>

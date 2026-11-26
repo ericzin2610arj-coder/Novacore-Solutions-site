@@ -61,7 +61,7 @@ export const empresa = {
       cargo: "Analista de sistemas",
       foto: "/images/Felipe.png",
       alt: "Foto de Felipe Martins",
-      descricao: "Responsável por analisar as necessidades dos clientes e planejar soluções tecnológicas eficientes."
+      descricao: "Responsável por analisar as necessidades dos clientes e planejar soluções tecnológicas eficientes. Atua na organização dos requisitos dos projetos, na definição de funcionalidades e na busca por melhorias que garantam qualidade e eficiência aos sistemas desenvolvidos pela NovaCore Solutions."
     }
   ]
 };
