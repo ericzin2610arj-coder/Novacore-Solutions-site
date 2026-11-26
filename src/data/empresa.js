@@ -55,6 +55,13 @@ export const empresa = {
       foto: "/images/Lucas.png",
       alt: "Foto de Lucas Ferreira",
       descricao: "Lucas sempre gostou de criatividade e design. Na NovaCore Solutions, desenvolve interfaces modernas e intuitivas, buscando melhorar a experiência dos usuários e tornar os sistemas mais fáceis de utilizar."
+    },
+    {
+      nome: "Felipe Martins",
+      cargo: "Analista de sistemas",
+      foto: "/images/Felipe.png",
+      alt: "Foto de Felipe Martins",
+      descricao: "Responsável por analisar as necessidades dos clientes e planejar soluções tecnológicas eficientes."
     }
   ]
 };
