@@ -38,21 +38,21 @@ export const empresa = {
     {
       nome: "Eric Araújo",
       cargo: "CEO e Gerente de projetos",
-      foto: "/images/Eric.jpg",
+      foto: "/images/Eric.png",
       alt: "Foto de Eric Araújo",
       descricao: "Eric sempre teve interesse por tecnologia e organização. Na NovaCore Solutions, é responsável por planejar projetos, definir prazos e coordenar a equipe para entregar soluções de qualidade.."
     },
     {
       nome: "Enzo Victorio",
       cargo: "Desenvolvedor Full Stack",
-      foto: "/images/Enzo.jpg",
+      foto: "/images/Enzo.png",
       alt: "Foto de Enzo Victorio",
       descricao: "Enzo desenvolveu interesse pela programação e criação de sistemas. Na NovaCore Solutions, trabalha no desenvolvimento de sites e aplicações, cuidando tanto da parte visual quanto da estrutura interna."
     },
     {
       nome: "Lucas Ferreira",
       cargo: "Designer UI/UX",
-      foto: "/images/Lucas.jpg",
+      foto: "/images/Lucas.png",
       alt: "Foto de Lucas Ferreira",
       descricao: "Lucas sempre gostou de criatividade e design. Na NovaCore Solutions, desenvolve interfaces modernas e intuitivas, buscando melhorar a experiência dos usuários e tornar os sistemas mais fáceis de utilizar."
     }
