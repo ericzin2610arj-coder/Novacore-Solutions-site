@@ -1,36 +1,34 @@
-/* src/styles/global.css */
-:root {
-  /* Paleta de Cores baseada no Logo */
-  --cor-primaria: #0d1520; /* Quase preto */
-  --cor-secundaria: #0058ec; /* Azul escuro do degradê (links e botões) */
-  --cor-destaque: #008ff7; /* Azul claro do degradê (decorativo) */
-  --cor-fundo: #ffffff;
-  --cor-fundo-alt: #f8fafc;
-  --cor-texto: #334155;
-  --cor-texto-secundario: #64748b;
-  --cor-texto-invertido: #ffffff;
-  --cor-texto-invertido-suave: #cbd5e1;
-  --cor-borda: #e2e8f0;
-  
-  /* Variável para o Hero */
-  --cor-hero-fim: #00224d;
 
-  /* Degradês Globais */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --cor-primaria: #020817;
+  --cor-secundaria: #0058EC;
+  --cor-destaque: #00CFFF;
+  --cor-fundo: #020817;
+  --cor-fundo-alt: #071B35;
+  --cor-texto: #E2E8F0;
+  --cor-texto-secundario: #94A3B8;
+  --cor-texto-invertido: #FFFFFF;
+  --cor-texto-invertido-suave: #CBD5E1;
+  --cor-borda: #15345A;
+  --cor-hero-fim: #00224D;
+
   --degrade-marca: linear-gradient(
     90deg,
     var(--cor-secundaria),
     var(--cor-destaque)
   );
+
   --degrade-hero: linear-gradient(
     135deg,
     var(--cor-primaria),
     var(--cor-hero-fim)
   );
 
-  /* Variáveis Estruturais */
   --borda-raio: 8px;
-  --sombra-cartao: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --sombra-cartao-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --sombra-cartao: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+  --sombra-cartao-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
   --espacamento-secao: 4rem;
 }
 
@@ -41,8 +39,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   line-height: 1.6;
@@ -55,23 +52,34 @@ main {
   flex: 1;
 }
 
-h1, h2, h3 {
-  color: var(--cor-primaria);
+h1,
+h2,
+h3 {
+  font-family: 'Inter', sans-serif;
+  color: var(--cor-texto-invertido);
   line-height: 1.2;
   margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-weight: 800;
 }
 
 p {
   margin-bottom: 1rem;
+  color: var(--cor-texto);
 }
 
 a {
-  color: var(--cor-secundaria);
+  color: var(--cor-destaque);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
+  color: var(--cor-secundaria);
   text-decoration: underline;
 }
 
@@ -92,16 +100,40 @@ a:hover {
 
 .btn {
   display: inline-block;
-  background-color: var(--cor-secundaria);
+  background: var(--degrade-marca);
   color: var(--cor-texto-invertido);
   padding: 0.75rem 1.5rem;
   border-radius: var(--borda-raio);
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   text-align: center;
-  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn:hover {
-  background-color: var(--cor-primaria);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 88, 236, 0.25);
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --espacamento-secao: 3rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
 }
