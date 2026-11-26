@@ -1,112 +1,36 @@
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | NovaCore Solutions</title>
-	</head>
-	<body>
-		<header>
-			<strong>NovaCore Solutions</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+<LayoutBase 
+	titulo="Sobre Nós" 
+	descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+	<section>
+		<h1>Sobre a {empresa.nome}</h1>
+		<p>{empresa.historia}</p>
+	</section>
 
-		<main>
-			<section>
-				<h1>Sobre a NovaCore Solutions</h1>
-				<p>
-					A NovaCore Solutions foi fundada em 2026 por Eric Araújo
-					e Enzo Victorio, dois estudantes de Informática apaixonados
-					por tecnologia e inovação. O projeto nasceu durante o
-					desenvolvimento de atividades acadêmicas, quando ambos
-					perceberam a necessidade de criar soluções digitais que
-					ajudassem empresas a organizar processos e aumentar sua
-					produtividade. Com o crescimento da empresa, a equipe
-					passou a contar também com Lucas Ferreira, especialista
-					em Design UI/UX, responsável por criar interfaces
-					modernas, intuitivas e focadas na experiência do usuário.
-					Juntos, os três colaboradores unem criatividade, design
-					e programação para transformar ideias em soluções
-					inteligentes.
-				</p>
-			</section>
+	<section>
+		<h2>Missão</h2>
+		<p>{empresa.missao}</p>
+	</section>
 
-			<section>
-				<h2>Missão</h2>
-				<p>
-					Desenvolver soluções tecnológicas que simplifiquem
-					processos e impulsionem o crescimento de empresas.
-				</p>
-			</section>
+	<section>
+		<h2>Visão</h2>
+		<p>{empresa.visao}</p>
+	</section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>
-					Ser reconhecida como uma das principais Software Houses
-					em inovação e desenvolvimento de software no Brasil.
-				</p>
-			</section>
-
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Inovação contínua</h3>
-						<p>
-							Buscamos constantemente novas ideias, tecnologias e soluções criativas para desenvolver projetos modernos e eficientes.
-						</p>
-					</li>
-					<li>
-						<h3>Qualidade e excelência</h3>
-						<p>
-							Comprometemo-nos a oferecer serviços de alta qualidade, garantindo eficiência, organização e satisfação dos nossos clientes.
-						</p>
-					</li>
-					<li>
-						<h3>Ética e transparência</h3>
-						<p>
-							Valorizamos a honestidade, o respeito e a responsabilidade em todas as nossas relações, mantendo uma comunicação clara e confiável com clientes e colaboradores.
-						</p>
-					</li>
-					<li>
-						<h3>Trabalho em equipe</h3>
-						<p>
-							Valorizar a colaboração e a união de diferentes
-							habilidades para alcançar objetivos comuns.
-						</p>
-					</li>
-					<li>
-						<h3>Foco no cliente</h3>
-						<p>
-							Compreender as necessidades dos clientes e
-							buscar soluções que atendam às suas expectativas.
-						</p>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Público-alvo</h2>
-				<p>
-					Pequenas e médias empresas, comércios, clínicas,
-					escolas e empreendedores que necessitam de sistemas
-					personalizados.
-				</p>
-			</section>
-		</main>
-
-		<footer>
-			<p>
-				&copy; 2026 NovaCore Solutions. Todos os direitos reservados.
-			</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Nossos Valores</h2>
+		<ul>
+			{empresa.valores.map((valor) => (
+				<li>
+					<h3>{valor.titulo}</h3>
+					<p>{valor.descricao}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</LayoutBase>

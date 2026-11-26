@@ -1,40 +1,20 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Início | Novacore Solutions</title>
-	</head>
-	<body>
-		<header>
-			<strong>Novacore Solutions</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Transformando ideias em soluções inteligentes.</h1>
-				<p>Desenvolver soluções tecnológicas que simplifiquem processos e impulsionem o
-crescimento de empresas.</p>
-				<a href="/contato">Fale Conosco</a>
-			</section>
+<LayoutBase 
+	titulo="Início" 
+	descricao={`Bem-vindo à ${empresa.nome}. ${empresa.slogan}`}
+>
+	<section>
+		<h1>{empresa.slogan}</h1>
+		<p>{empresa.missao}</p>
+		<a href="/contato">Fale Conosco</a>
+	</section>
 
-			<section>
-				<h2>Quem Atendemos</h2>
-				<p>Pequenas e médias empresas (PMEs), comércios, clínicas, escolas e empreendedores que
-necessitam de sistemas personalizados.</p>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 Novacore Solutions. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Quem Atendemos</h2>
+		<p>{empresa.publicoAlvo}</p>
+	</section>
+</LayoutBase>
